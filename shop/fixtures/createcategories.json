@@ -1,0 +1,11 @@
+[
+    {
+        "model": "shop.category",
+        "pk": "3861ba8e-5ccd-4132-99a8-b8a8f753d04e",
+        "fields": {
+            "name": "Chair",
+            "description": "",
+            "image": "/category/chair_banner2.jpg"
+        }
+    }
+]

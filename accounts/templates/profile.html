@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block metadescription %}
+	Edit Profile 
+{% endblock %}
+{% block title %}
+	Edit Profile - Homely Furniture Store
+{% endblock %}
+{% block content %}
+
+<h3>Hi {{ user.username }} , here you can See Your Profile</h3>
+<br></br>
+
+<div class = "container">
+    <p>
+        <b>Account Name : </b> {{ user.username }} <br><br>
+        <b>Account Name : </b> {{ user.first_name }} <br><br>
+        <b>Account Name : </b> {{ user.last_name }} <br><br>
+        <b>Account Email : </b> {{ user.email }} <br><br>
+        <b>Account Created : </b> {{ user.date_joined }} <br><br>
+</div>
+
+<a class = "btn btn-secondary" href="{% url 'accounts:edit_profile'%}">Edit Your profile</a>
+<a class = "btn btn-secondary" href="{% url 'accounts:change_password'%}">Change Your Password</a>
+
+{% endblock %}

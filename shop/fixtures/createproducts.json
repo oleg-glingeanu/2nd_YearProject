@@ -1,0 +1,50 @@
+[
+    {
+      "model": "shop.product",
+      "pk": "ef94535a-d0db-4419-8491-166a9636a352",
+      "fields": {
+        "category_id":"3861ba8e-5ccd-4132-99a8-b8a8f753d04e",
+        "name": "Black Wooden Chair",
+        "description": "Black Wooden Chair",
+        "stock": 10,
+        "price": 25.00,
+        "image": "/product/black_chair.jpg"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "2f1e0678-1d4b-4c76-9463-e18a96bdcd05",
+        "fields": {
+          "category_id":"3861ba8e-5ccd-4132-99a8-b8a8f753d04e",
+          "name": "Cool Wooden Chair",
+          "description": "Cool Wooden Chair",
+          "stock": 10,
+          "price": 25.00,
+          "image": "/product/cool_wooden_chair.jpg"
+          }
+      },
+      {
+        "model": "shop.product",
+        "pk": "11dde358-9821-452e-aae1-152000fcee3d",
+        "fields": {
+          "category_id":"3861ba8e-5ccd-4132-99a8-b8a8f753d04e",
+          "name": "Glass Chair",
+          "description": "Glass Chair",
+          "stock": 10,
+          "price": 25.00,
+          "image": "/product/glass_chair.jpg"
+          }
+      },
+      {
+        "model": "shop.product",
+        "pk": "fd2d629d-5c00-4a06-bc17-b2874057f013",
+        "fields": {
+          "category_id":"3861ba8e-5ccd-4132-99a8-b8a8f753d04e",
+          "name": "Plastic Chair",
+          "description": "Plastic Chair",
+          "stock": 10,
+          "price": 25.00,
+          "image": "/product/plastic_chair.jpg"
+          }
+      }
+]
