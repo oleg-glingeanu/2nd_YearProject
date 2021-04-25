@@ -91,12 +91,12 @@ def changePassword(request):
 
 
 # Wish-list code:
-@login_required
+@login_required(login_url = 'accounts:signin' )
 def wishlist(request):
     products = Product.objects.filter(user_wishlist = request.user)
     return render(request, 'user_wishlist.html', {'wishlist':products})
 
-@login_required
+@login_required(login_url = 'accounts:signin' )
 def add_to_wishlist(request, product_id):
     product = Product.objects.get(id=product_id)
     if product.user_wishlist.filter(id=request.user.id).exists():

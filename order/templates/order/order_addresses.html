@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+	Order Details - Homely Furniture
+{% endblock %}
+{% block content %}
+	<div>
+		<div class="text-center">
+			<br>
+			<h1 class="text-center my_title">Order Address History</h1>
+			<br>
+			{% if order_details %}
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Order ID</th>
+						<th>Shipping Address</th>
+						<th>Billing Address</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for order in order_details %}
+					<tr>
+                    <td>{{ order.id }}</td>
+                    <td >
+						<b>Shipping Address: </b><br>
+						{{ order.shippingName }}<br>
+						{{ order.shippingAddress1 }}<br>
+						{{ order.shippingCity }}<br>
+						{{ order.shippingPostcode }}<br>
+						{{ order.shippingCountry }}<br>
+					</td>
+						<td><b>Billing Address: </b><br>
+						{{ order.billingName }}<br>
+						{{ order.billingAddress1 }}<br>
+						{{ order.billingCity }}<br>
+						{{ order.billingPostcode }}<br>
+						{{ order.billingCountry }}<br></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			{% else %}
+			<p>You have not placed any orders yet.<br><br><a href="{% url 'shop:allProdCat' %}" 
+				                                           class="btn btn-secondary">Continue shopping</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<br>
+	<br>
+{% endblock %}
+
+

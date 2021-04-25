@@ -21,3 +21,11 @@ def viewOrder(request, order_id):
         order = Order.objects.get(id = order_id , emailAddress= email)
         order_items = OrderItem.objects.filter(order=order)
     return render(request, 'order/order_detail.html',{'order':order, 'order_items':order_items})
+
+
+@login_required
+def addressHistory(request):
+    if request.user.is_authenticated:
+        email = str(request.user.email)
+        order_details = Order.objects.filter(emailAddress=email)
+    return render(request, 'order/order_addresses.html', {'order_details':order_details})

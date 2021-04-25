@@ -18,6 +18,7 @@
             {% endfor %}
           </div>
         </li>
+{% if user.is_authenticated %}
         {% if item_count > 0 %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'cart:cart_detail' %}">CART <i class = "fas fa-shopping-cart"></i> ({{item_count}})</a>
@@ -25,6 +26,9 @@
         {%endif%}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'accounts:wishlist' %}"> WISH-HLIST <i class="fa fa-heart" aria-hidden="false"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'accounts:dashboard_view' %}"> ACCOUNT DASHBOARD <i class="fas fa-columns aria-hidden="false""></i></a>
         </li>
       </ul>
 
@@ -34,5 +38,6 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
+{% endif %}
   </nav>
   <br>

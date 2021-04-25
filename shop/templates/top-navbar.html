@@ -6,7 +6,10 @@
                 Welcome, <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
                 aria-haspopup="true" aria-expanded="false">{{ user.username }}
                 <i class="fas fa-user-circle"></i></a>
-				<div class="dropdown-menu dropdown-menu-right">
+				<div class="dropdown-menu dropdown-menu-left">
+					<a href="{% url 'accounts:view_profile' %}" class = "dropdown-item">Account Details</a>
+					<a href="{% url 'accounts:edit_profile' %}" class = "dropdown-item">Change Account details</a>
+					<a href="{% url 'accounts:change_password' %}" class = "dropdown-item">Change Password</a>
 					<a href="{% url 'accounts:dashboard_view' %}" class = "dropdown-item">Account Dashboard</a>
 				</div>
 				
